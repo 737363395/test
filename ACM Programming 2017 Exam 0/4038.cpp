@@ -7,7 +7,7 @@
 
 using namespace std;
 
-const int N = 100100;
+const int N = 200200;
 
 int f[N];
 map <int, int> t;
