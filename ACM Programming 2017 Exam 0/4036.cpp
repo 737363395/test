@@ -11,8 +11,7 @@ const int N = 1000010;
 ll f[N];
 int c[N];
 
-int read()
-{
+int read() {
 	int x = 0, f = 1;
 	char c = getchar();
 	while (c < '0' || c > '9') {
