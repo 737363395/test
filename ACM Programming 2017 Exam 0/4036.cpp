@@ -11,14 +11,31 @@ const int N = 1000010;
 ll f[N];
 int c[N];
 
+int read()
+{
+	int x = 0, f = 1;
+	char c = getchar();
+	while (c < '0' || c > '9') {
+		if (c == '-') f = -1;
+		c = getchar();
+	}
+	while (c >= '0' && c <= '9') {
+		x = x * 10 + c - '0';
+		c = getchar();
+	}
+	return x * f;
+}
+
 int main() {
 	int t, n, a, b;
 	ll s;
-	scanf("%d", &t);
+	t = read();
 	while (t) {
-		scanf("%d%d%d", &n, &a, &b);
+		n = read();
+		a = read();
+		b = read();
 		s = a + b;
-		for (int i = 1; i <= n; ++i) scanf("%d", &c[i]);
+		for (int i = 1; i <= n; ++i) c[i] = read();
 		for (int i = 1; i <= n; ++i) {
 			s -= c[i];
 			if (s < 0) {
